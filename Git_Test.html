@@ -1,4 +1,4 @@
-
+<!--ファイルが1つだけなのでブランチも1本-->
 <!DOCTYPE html>
 <html lang="ja">
 <head>
@@ -45,6 +45,16 @@
         const numberInput = document.getElementById('numberInput');
         const checkButton = document.getElementById('checkButton');
         const outputText = document.getElementById('outputText');
+        
+        // 入力イベントリスナー
+        numberInput.addEventListener('input', () => {
+            if (numberInput.value === '') {
+                checkButton.disabled = true;
+                outputText.textContent = "整数を入力してください";
+            } else {
+                checkButton.disabled = false;
+            }
+        });
     </script>
 </body>
 </html>
