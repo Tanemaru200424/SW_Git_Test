@@ -53,7 +53,10 @@
         
         // 入力イベントリスナー
         numberInput.addEventListener('input', () => {
-            if (numberInput.value === '') {
+            const inputValue = numberInput.value.trim();  // 余分な空白を削除
+            const num = Number(inputValue);  // 数値に変換
+
+            if (inputValue === '' || !Number.isInteger(num)) {
                 checkButton.disabled = true;
                 outputText.textContent = "整数を入力してください";
             } else {
