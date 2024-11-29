@@ -30,5 +30,21 @@
         <button id="checkButton" disabled>判定</button>
     </div>
     <div class="output" id="outputText">整数を入力してください</div>
+    
+    <script>
+        // 偶奇判定関数
+        function Even_Or_Odd(num) 
+        {
+            if (!Number.isInteger(num)) 
+            {
+                throw new Error("引数は整数である必要があります");
+            }
+        }
+
+        // 要素取得
+        const numberInput = document.getElementById('numberInput');
+        const checkButton = document.getElementById('checkButton');
+        const outputText = document.getElementById('outputText');
+    </script>
 </body>
 </html>
