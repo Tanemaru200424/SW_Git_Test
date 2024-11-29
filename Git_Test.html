@@ -55,6 +55,17 @@
                 checkButton.disabled = false;
             }
         });
+        
+        // ボタンクリックイベントリスナー
+        checkButton.addEventListener('click', () => {
+            const inputValue = parseInt(numberInput.value, 10);
+            const result = Even_Or_Odd(inputValue);
+            if (result === 0) {
+                outputText.textContent = "偶数です";
+            } else if (result === 1) {
+                outputText.textContent = "奇数です";
+            }
+        });
     </script>
 </body>
 </html>
